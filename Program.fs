@@ -1,5 +1,12 @@
-﻿let rec sumOfDigits n =
-    if n = 0 then 0 else (n % 10) + sumOfDigits (n / 10)
+﻿let sumOfDigits n=
+    let rec sumDigits n curSum =
+        if n = 0 then curSum
+         else
+             let n1 = n/10
+             let cifr = n%10
+             let newSum = curSum + cifr
+             sumDigits n1 newSum
+    sumDigits n 0
 
 let main () =
     printf "Введите число: "
