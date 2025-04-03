@@ -1,26 +1,19 @@
-﻿let sumOfDigits n=
-    let rec sumDigits n curSum =
-        match n with
-         | 0 -> curSum
-         | _ ->
-             let n1 = n/10
-             let cifr = n%10
-             sumDigits n1 (curSum + cifr)
-    sumDigits n 0
+﻿let rec reduce (number:int) (func:int->int->int) (initNumber:int) =
+    match number with
+    | 0 -> initNumber
+    | _ ->
+        let digit  = number % 10
+        let newInitNumber = func initNumber digit
+        reduce (number/10) func newInitNumber
 
-let factorial n=
-    let rec mul n curMul =
-        match n with
-        | 0 | 1 -> curMul
-        | _ -> mul(n-1) (curMul*n)
-    mul n 1
+let main ()=
+    
+    System.Console.WriteLine("Минимальное {0}",reduce 123 (fun a b -> match a with | _ when a<=b->a | _ -> b) 10)
+    System.Console.WriteLine("Произведение {0}",reduce 123 (fun a b->a*b)  1)
+    System.Console.WriteLine("Количество чисел {0}", reduce 123 (fun _ a->a+1) 0)
 
-let isLogicalFunc logicVar numericVar =
-    match logicVar with
-    | true -> sumOfDigits numericVar
-    | false -> factorial numericVar
-
-let main () =
-        System.Console.WriteLine(isLogicalFunc false 12)
-        System.Console.WriteLine(isLogicalFunc true 12)
 main()
+
+
+
+    
