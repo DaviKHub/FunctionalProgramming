@@ -22,11 +22,10 @@ let isPrime (number:int)=
     | _  -> divisor number 3
     
     
-
 let main ()=
     
     System.Console.WriteLine("Максимальное нечетное: {0}",reduceBy 123456789 (fun a b -> match a with | _ when a>=b->a | _ -> b) -1 (fun d -> d%2=1))
     System.Console.WriteLine("Произведение простых: {0}",reduceBy 123456789 (*) 1 (fun d -> isPrime d=true))
-    System.Console.WriteLine("Количество чисел кратных 5: {0}", reduceBy 123456789 (fun _ a -> a+1) 0 (fun d -> d%5=0))
+    System.Console.WriteLine("Количество чисел кратных 5: {0}", reduceBy 123456789 (fun a _ -> a+1) 0 (fun d -> d%5=0))
 
 main()
