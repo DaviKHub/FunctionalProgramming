@@ -1,11 +1,16 @@
-﻿let favLangue (langue:string)=
-    match langue with
+﻿open System
+
+let favLanguage (language:string)=
+    match language with
     | "F#"| "Prolog"->"Подлиза"
     | "C" -> "Странное решение"
     | _ -> "Не знаю такого"
     
     
 let main (args)=
-     System.Console.WriteLine( favLangue args)
+     favLanguage args
 
-main(System.Console.ReadLine())
+let LP lang=
+    (System.Console.ReadLine>>favLanguage>>System.Console.WriteLine)()
+    
+LP()
