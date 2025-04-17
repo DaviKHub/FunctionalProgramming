@@ -6,10 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="ListMethod.fs" />
-        <Compile Include="WorkWithList.fs" />
-        <Compile Include="WorkWithNumbers.fs" />
-        <Compile Include="Program.fs" />
+        <Compile Include="Lab6\ListMethod.fs"/>
+        <Compile Include="Lab6\WorkWithNumbers.fs"/>
+        <Compile Include="Lab6\WorkWithList.fs"/>
+        <Compile Include="Lab6\Program.fs"/>
     </ItemGroup>
 
 </Project>
