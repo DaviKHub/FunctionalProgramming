@@ -6,14 +6,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Lab7\Geometry\GeometricFigure.fs" />
-        <Compile Include="Lab7\Geometry\IPrint.fs" />
-        <Compile Include="Lab7\Geometry\Rectangle.fs" />
-        <Compile Include="Lab7\Geometry\Circle.fs" />
-        <Compile Include="Lab7\Geometry\Square.fs" />
-        <Compile Include="Lab7\Geometry\GeometricFigureType.fs" />
-        <Content Include="Lab7\Geometry\Geometry.fsproj" />
-        <Compile Include="Lab7\Geometry\Program.fs" />
+        <Compile Include="GeometricFigure.fs" />
+        <Compile Include="IPrint.fs" />
+        <Compile Include="Rectangle.fs" />
+        <Compile Include="Circle.fs" />
+        <Compile Include="Square.fs" />
+        <Compile Include="GeometricFigureType.fs" />
+        <Content Include="Geometry.fsproj" />
+        <Compile Include="Program.fs" />
     </ItemGroup>
 
 </Project>

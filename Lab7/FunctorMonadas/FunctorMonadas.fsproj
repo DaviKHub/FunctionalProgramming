@@ -1,3 +1,4 @@
+
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
@@ -6,10 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="ListMethod.fs"/>
-        <Compile Include="WorkWithNumbers.fs"/>
-        <Compile Include="WorkWithList.fs"/>
-        <Compile Include="Program.fs"/>
+        <Compile Include="Program.fs" />
+        <Compile Include="Program.fs" />
     </ItemGroup>
 
 </Project>

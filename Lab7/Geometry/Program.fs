@@ -1,4 +1,4 @@
-module Program
+module Geometry.Program
 
 open Rectangle
 open Square
